@@ -1,34 +1,82 @@
 public class Car {
-    private String marka;
+    private String brand;
     private String model;
-    private double value;
+    private double engineValume;
     private String color;
-    private int year;
-    private String country;
-    public Car (String marka,String model,double value,String color,int year,String country) {
-        if (marka==null){
-            this.marka = "default";}
-        else {this.marka = marka;}
-        if (model==null){
-            this.model = "default";}
-        else {this.model = model;}
-        if (value==0.0){
-            this.value = 1.5;}
-        else {this.value = value;}
-        if (color==null){
-            this.color = "white";}
-        else {this.color = color;}
-        if (year==0){
-            this.year = 2000;}
-        else {this.year = year;}
-        if (country==null){
-            this.country = "default";}
-        else {this.country = marka;}
+    private int productionYear;
+    private String productionCountry;
+
+    public String getBrand() {
+        return brand;
     }
 
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel() {
+        this.model = model;
+    }
+
+    public double getEngineValume() {
+        return engineValume;
+    }
+
+    public void setEngineValume(double engineValume) {
+        this.engineValume = engineValume;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor() {
+        this.color = color;
+    }
+
+    public int getProductionYear() {
+        return productionYear;
+    }
+
+    public void setProductionYear(int productionYear) {
+        this.productionYear = productionYear;
+    }
+
+    public String getProductionCountry() {
+        return productionCountry;
+    }
+
+    public void setProductionCountry(String productionCountry) {
+        this.productionCountry = productionCountry;
+    }
+
+    public Car(String brand, String model, double engineValume, String color, int productionYear, String productionCountry) {
+        this.brand = brand;
+        this.model = model;
+        this.engineValume = engineValume;
+        this.color = color;
+        this.productionYear = productionYear;
+        this.productionCountry = productionCountry;
+    }
+
+
+
     @Override
-    public String toString() {
-        return marka + model + value + color + year +country;
-        }
+    public String toString(){
+        return "Car{"+
+                "brand='"+brand+'\''+
+                ", model='"+model+'\''+
+                ", engineValume='"+engineValume+
+                ", color'"+color+'\''+
+                ", productionYear="+productionYear+
+                ", productionCountry='"+productionCountry+'\''+
+                '}';
+
+
+    }
 }
 
